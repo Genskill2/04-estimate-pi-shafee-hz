@@ -3,16 +3,15 @@
 #include <stdio.h>
 #include <math.h>
 
-float wallis_pi(int){
+float wallis_pi(int num){
  float pi;
-           float a;
+           float a=1;
            int i;
-                for( i=1; i<10; i++){
-                   a = 4*i*i/4*i*i-1;
-                    a = a*4*i*i/4*i*i-1; 
+                for( i=1; i<num; i++){
+                    a = a*4*i*i/(4*i*i-1); 
                    }
            pi = 2*a;
-           printf("value of pi is%f.\n",pi);
+           return pi;
            }  
 int main(void) {
   float pi;
